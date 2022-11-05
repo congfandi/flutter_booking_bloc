@@ -1,3 +1,4 @@
+import 'package:booking/data/src/img_string.dart';
 import 'package:booking/presentation/widget/widget.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Booking App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Poppins',
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -67,7 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
               text: "Download",
               width: 120,
               type: SecondaryType.type3,
-            )
+            ),
+            Image.asset(ImgString.cittaPlants)
           ],
         ),
       ),
