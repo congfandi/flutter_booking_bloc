@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class SecondaryButton extends StatelessWidget {
   const SecondaryButton(
       {Key? key,
-      this.type = SecondaryType.type1,
+      this.type = SecondaryType.type3,
       required this.onPressed,
       required this.text,
       this.width = 78})

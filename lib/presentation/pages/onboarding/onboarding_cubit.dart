@@ -22,4 +22,8 @@ class OnboardingCubit extends Cubit<OnboardingState> {
       emit(state.clone()..currentIndex = index);
     }
   }
+
+  void skip() {
+    // TODO: implement skip
+  }
 }

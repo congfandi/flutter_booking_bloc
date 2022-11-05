@@ -1,3 +1,4 @@
+import 'package:booking/extension/double_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,15 +18,25 @@ class OnboardingPage extends StatelessWidget {
   }
 
   Widget _buildPage(BuildContext context) {
-
     return Scaffold(
-      body: Column(
-        children: const [
-          OnboardingImage(),
-          OnboardingTitle(),
-          OnboardingIndicator(),
-          OnboardingButton(),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.only(
+          top: 16,
+          left: 16,
+          right: 16,
+        ),
+        child: Column(
+          children: [
+            const OnboardingImage(),
+            32.0.height,
+            const OnboardingTitle(),
+            45.0.height,
+            const OnboardingIndicator(),
+            53.0.height,
+            const OnboardingButton(),
+            82.9.height,
+          ],
+        ),
       ),
     );
   }
