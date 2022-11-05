@@ -1,3 +1,4 @@
+import 'package:booking/presentation/widget/widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
@@ -53,6 +55,19 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            PrimaryButton(
+              onPressed: () {},
+              text: "Download",
+              width: 120,
+              type: PrimaryButtonType.type3,
+            ),
+            const SizedBox(height: 16),
+            SecondaryButton(
+              onPressed: () {},
+              text: "Download",
+              width: 120,
+              type: SecondaryType.type3,
+            )
           ],
         ),
       ),
