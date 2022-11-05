@@ -98,20 +98,56 @@ class AppFont {
       );
 
   static TextStyle get componentMediumBold => const TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w600,
-    color: Colors.black,
-  );
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+        color: Colors.black,
+      );
 
   static TextStyle get componentMedium => const TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
-    color: Colors.black,
-  );
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: Colors.black,
+      );
 
   static TextStyle get componentSmall => const TextStyle(
-    fontSize: 12,
-    fontWeight: FontWeight.w600,
-    color: Colors.black,
-  );
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+        color: Colors.black,
+      );
+
+  static TextStyle get h0 => const TextStyle(
+        fontSize: 72,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+      );
+
+  static TextStyle get h1 => const TextStyle(
+        fontSize: 56,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+      );
+
+  static TextStyle get h2 => const TextStyle(
+        fontSize: 40,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+      );
+
+  static TextStyle get h3 => const TextStyle(
+        fontSize: 32,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+      );
+
+  static TextStyle get h4 => const TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+      );
+
+  static TextStyle get h5 => const TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+      );
 }

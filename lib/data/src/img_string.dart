@@ -27,5 +27,5 @@ class ImgString {
   static const String cittaPlants6 ='assets/images/Città Plants-6.png';
   static const String cittaStanding ='assets/images/Città Standing.png';
   static const String cittaStanding1 ='assets/images/Città Standing-1.png';
-  static const String cittaStanding2 ='assets/images/Città Standing-3.png';
+  static const String cittaStanding2 ='assets/images/Città Standing-2.png';
 }
