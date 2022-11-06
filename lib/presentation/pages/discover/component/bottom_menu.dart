@@ -1,7 +1,5 @@
 import 'package:booking/presentation/pages/discover/discover_cubit.dart';
-import 'package:booking/presentation/pages/discover/discover_state.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BottomMenu extends StatelessWidget {
@@ -24,7 +22,7 @@ class BottomMenu extends StatelessWidget {
           _buildItem(
             onTap: () => cubit.changeIndex(0),
             icon: Icons.location_on_sharp,
-            title: 'Location',
+            title: 'Trips',
             isSelected: cubit.state.selectedIndex == 0,
           ),
           _buildItem(
@@ -52,7 +50,6 @@ class BottomMenu extends StatelessWidget {
   }) {
     return GestureDetector(
       onTap: (){
-        debugPrint("onTap");
         onTap!();
       },
       child: Column(
