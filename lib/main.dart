@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
               fontFamily: 'Poppins',
             ),
-            home: const DiscoverPage(),
+            home: const LoginPage(),
           );
         });
   }
