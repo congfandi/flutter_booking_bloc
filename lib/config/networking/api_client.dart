@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
+import 'package:logging/logging.dart';
 
 class ApiClient extends http.BaseClient {
   @override
@@ -20,7 +21,7 @@ class ApiClient extends http.BaseClient {
   @override
   Future<http.Response> get(Uri url, {Map<String, String>? headers}) {
     return super.get(url, headers: headers).then((value) {
-      debugPrint(value.body);
+      Logger.root.info(value.body);
       return value;
     }).catchError((err) {
       debugPrint(err.toString());
