@@ -1,6 +1,7 @@
 import 'package:booking/data/src/img_string.dart';
 import 'package:booking/presentation/pages/onboarding/onboarding_view.dart';
 import 'package:booking/presentation/pages/welcome/login/login_view.dart';
+import 'package:booking/presentation/pages/welcome/welcome_done/welcome_done_view.dart';
 import 'package:booking/presentation/pages/welcome/welcome_view.dart';
 import 'package:booking/presentation/widget/widget.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
               fontFamily: 'Poppins',
             ),
-            home: const LoginPage(),
+            home: const WelcomeDonePage(),
           );
         });
   }
