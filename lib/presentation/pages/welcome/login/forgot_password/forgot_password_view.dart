@@ -4,7 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'forgot_password_cubit.dart';
 import 'forgot_password_state.dart';
 
-class Forgot_passwordPage extends StatelessWidget {
+class ForgotPasswordPage extends StatelessWidget {
+  const ForgotPasswordPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
