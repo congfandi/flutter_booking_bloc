@@ -7,9 +7,10 @@ import 'package:logging/logging.dart';
 class ApiClient extends http.BaseClient {
   @override
   Future<http.StreamedResponse> send(http.BaseRequest request) {
-    debugPrint('${request.method} => ${request.url} \n ${request.headers}');
+    Logger.root.info('============================REQUEST============================');
+    Logger.root.info('${request.method} ${request.url}');
+    Logger.root.info('${request.headers}');
     return request.send().then((value) {
-      debugPrint('${value.statusCode} => ${value.reasonPhrase}');
       return value;
     }).catchError((err) async {
       debugPrint(err.toString());
@@ -21,7 +22,9 @@ class ApiClient extends http.BaseClient {
   @override
   Future<http.Response> get(Uri url, {Map<String, String>? headers}) {
     return super.get(url, headers: headers).then((value) {
+      Logger.root.info("============================RESPONSE============================");
       Logger.root.info(value.body);
+      Logger.root.info("================================================================");
       return value;
     }).catchError((err) {
       debugPrint(err.toString());
@@ -34,7 +37,9 @@ class ApiClient extends http.BaseClient {
     return super
         .post(url, headers: headers, body: body, encoding: encoding)
         .then((value) {
-      debugPrint(value.body);
+      Logger.root.info("============================RESPONSE============================");
+      Logger.root.info(value.body);
+      Logger.root.info("================================================================");
       return value;
     }).catchError((err) {
       debugPrint(err.toString());
