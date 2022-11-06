@@ -1,6 +1,5 @@
 import 'package:booking/config/config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FavoriteList extends StatelessWidget {
   const FavoriteList({Key? key}) : super(key: key);

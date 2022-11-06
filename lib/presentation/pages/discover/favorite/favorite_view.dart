@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'favorite_cubit.dart';
-import 'favorite_state.dart';
 
 class FavoritePage extends StatelessWidget {
   const FavoritePage({super.key});

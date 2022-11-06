@@ -7,7 +7,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'component/welcome_image.dart';
 import 'welcome_done_cubit.dart';
-import 'welcome_done_state.dart';
 
 class WelcomeDonePage extends StatelessWidget {
   const WelcomeDonePage({super.key});
