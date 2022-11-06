@@ -31,6 +31,7 @@ class SecondaryButton extends StatelessWidget {
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
           side: const BorderSide(color: AppColor.ink01),
+          backgroundColor: AppColor.ink06,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(4),
           ),
@@ -51,6 +52,7 @@ class SecondaryButton extends StatelessWidget {
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
           side: const BorderSide(color: AppColor.ink01),
+          backgroundColor: AppColor.ink06,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(4),
           ),
@@ -71,6 +73,7 @@ class SecondaryButton extends StatelessWidget {
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
           side: const BorderSide(color: AppColor.ink01),
+          backgroundColor: AppColor.ink06,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(4),
           ),
