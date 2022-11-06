@@ -1,11 +1,9 @@
-import 'package:booking/extension/double_extension.dart';
+import 'package:booking/utils/extension/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'component/component.dart';
 import 'onboarding_cubit.dart';
-import 'onboarding_state.dart';
-
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
 
