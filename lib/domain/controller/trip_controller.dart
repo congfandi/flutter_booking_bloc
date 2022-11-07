@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:booking/config/config.dart';
-import 'package:booking/config/networking/base_response.dart';
 import 'package:booking/data/endpoint/endpoint.dart';
 import 'package:booking/domain/repository/repository.dart';
 
