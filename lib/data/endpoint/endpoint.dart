@@ -5,5 +5,5 @@ class Endpoint {
   static const String register = "$baseUrl/api/v1/register";
   static const String forgotPassword = "$baseUrl/api/v1/forgotPassword";
   static const String logout = "$baseUrl/api/v1/logout";
-  static const String trip = "$baseUrl/api/v1/trip";
+  static const String trip = "$baseUrl/api/v1/trips";
 }
