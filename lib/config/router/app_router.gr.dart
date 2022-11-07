@@ -17,6 +17,12 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    OnboardingRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const OnboardingPage(),
+      );
+    },
     WelcomeRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -72,8 +78,12 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           '/#redirect',
           path: '/',
-          redirectTo: '/welcome',
+          redirectTo: '/onboarding',
           fullMatch: true,
+        ),
+        RouteConfig(
+          OnboardingRoute.name,
+          path: '/onboarding',
         ),
         RouteConfig(
           WelcomeRoute.name,
@@ -108,6 +118,18 @@ class _$AppRouter extends RootStackRouter {
           path: '/favorite',
         ),
       ];
+}
+
+/// generated route for
+/// [OnboardingPage]
+class OnboardingRoute extends PageRouteInfo<void> {
+  const OnboardingRoute()
+      : super(
+          OnboardingRoute.name,
+          path: '/onboarding',
+        );
+
+  static const String name = 'OnboardingRoute';
 }
 
 /// generated route for
