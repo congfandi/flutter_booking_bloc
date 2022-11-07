@@ -1,16 +1,12 @@
-import 'package:booking/data/src/img_string.dart';
-import 'package:booking/presentation/pages/discover/discover_view.dart';
-import 'package:booking/presentation/pages/discover/favorite/favorite_view.dart';
-import 'package:booking/presentation/pages/onboarding/onboarding_view.dart';
-import 'package:booking/presentation/pages/welcome/login/login_view.dart';
-import 'package:booking/presentation/pages/welcome/welcome_done/welcome_done_view.dart';
-import 'package:booking/presentation/pages/welcome/welcome_view.dart';
-import 'package:booking/presentation/widget/widget.dart';
+import 'package:booking/config/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:logging/logging.dart';
+import 'package:get_it/get_it.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  GetIt.I.registerSingleton<AppRouter>(AppRouter());
   Logger.root.level = Level.ALL;
   Logger.root.onRecord.listen((record) {
     debugPrint(record.message);
@@ -23,18 +19,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final router = GetIt.I<AppRouter>();
     return ScreenUtilInit(
         designSize: const Size(375, 812),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
-          return MaterialApp(
+          return MaterialApp.router(
             title: 'Booking App',
             theme: ThemeData(
               primarySwatch: Colors.blue,
               fontFamily: 'Poppins',
             ),
-            home: const LoginPage(),
+            routerDelegate: router.delegate(),
+            routeInformationParser: router.defaultRouteParser(),
           );
         });
   }
