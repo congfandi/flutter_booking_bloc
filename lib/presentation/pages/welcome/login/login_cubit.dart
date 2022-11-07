@@ -1,17 +1,20 @@
 import 'package:bloc/bloc.dart';
 import 'package:booking/config/config.dart';
 import 'package:booking/domain/controller/auth_controller.dart';
+import 'package:booking/utils/helper/pref_helper.dart';
 import 'package:logging/logging.dart';
 
 import 'login_state.dart';
 
-class LoginCubit extends Cubit<LoginState> implements HttpState{
+class LoginCubit extends Cubit<LoginState> implements HttpState {
   LoginCubit() : super(LoginState().init());
   late final AuthController _authController = AuthController(this);
 
-  void login()async{
+  void login() async {
     BaseResponse baseResponse = await _authController.login(
         state.emailController.text, state.passwordController.text);
+    PrefHelper.instance.saveToken(baseResponse.result?.login?.token ?? "");
+    Logger.root.info("TOKENKU ${PrefHelper.instance.token}");
   }
 
   @override
@@ -33,5 +36,4 @@ class LoginCubit extends Cubit<LoginState> implements HttpState{
   void onSuccessRequest(String url, String method) {
     Logger.root.info("onSuccessRequest $url $method");
   }
-
 }
