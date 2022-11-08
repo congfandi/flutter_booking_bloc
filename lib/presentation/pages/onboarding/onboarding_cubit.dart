@@ -1,4 +1,7 @@
 import 'package:bloc/bloc.dart';
+import 'package:booking/config/router/router.dart';
+import 'package:booking/utils/helper/pref_helper.dart';
+import 'package:get_it/get_it.dart';
 
 import 'onboarding_state.dart';
 
@@ -8,6 +11,8 @@ class OnboardingCubit extends Cubit<OnboardingState> {
   void next() {
     if (state.currentIndex < state.onboardingList.length - 1) {
       emit(state.clone()..currentIndex = state.currentIndex + 1);
+    }else if (state.currentIndex == state.onboardingList.length - 1) {
+      skip();
     }
   }
 
@@ -17,13 +22,14 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     }
   }
 
-  void goTo(int index) {
+  void swiping(int index) {
     if (index >= 0 && index < state.onboardingList.length) {
       emit(state.clone()..currentIndex = index);
     }
   }
 
   void skip() {
-    // TODO: implement skip
+    PrefHelper.instance.setFirstInstall();
+    GetIt.I<AppRouter>().replace(const WelcomeRoute());
   }
 }

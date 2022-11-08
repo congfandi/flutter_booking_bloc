@@ -26,12 +26,7 @@ class BaseResponse {
 }
 
 class Result {
-  Result({
-    this.login,
-    this.trip,
-    this.yourRoomies,
-    this.otherMatches
-  });
+  Result({this.login, this.trip, this.yourRoomies, this.otherMatches});
 
   Result.fromJson(dynamic json) {
     login = json['login'] != null ? Login.fromJson(json['login']) : null;
@@ -56,13 +51,11 @@ class Result {
   List<Trip>? yourRoomies;
   List<Trip>? otherMatches;
 
-
   Result copyWith({
     Login? login,
     Trip? trip,
     List<Trip>? yourRoomies,
     List<Trip>? otherMatches,
-
   }) =>
       Result(
         login: login ?? this.login,
@@ -70,4 +63,11 @@ class Result {
         yourRoomies: yourRoomies ?? this.yourRoomies,
         otherMatches: otherMatches ?? this.otherMatches,
       );
+
+  Map toJson() => {
+        'login': login,
+        'trip': trip?.toJson() ?? {},
+        'yourRoomies': yourRoomies?.map((e) => e.toJson()).toList() ?? [],
+        'otherMatches': otherMatches?.map((e) => e.toJson()).toList() ?? [],
+      };
 }

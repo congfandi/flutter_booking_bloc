@@ -9,7 +9,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await PrefHelper.instance.init();
   GetIt.I.registerSingleton<AppRouter>(AppRouter());
-  Logger.root.level = Level.ALL;
+  Logger.root.level = Level.OFF;
   Logger.root.onRecord.listen((record) {
     debugPrint(record.message);
   });
