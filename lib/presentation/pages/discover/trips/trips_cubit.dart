@@ -23,14 +23,35 @@ class TripsCubit extends Cubit<TripsState> implements HttpState {
   }
 
   @override
-  void onEndRequest(String url, String method) {}
+  void onEndRequest(String url, String method) {
+    // emit(
+    //     state.clone()
+    //       ..status = HttpStateStatus.idle
+    // );
+  }
 
   @override
-  void onErrorRequest(String url, String method) {}
+  void onErrorRequest(String url, String method) {
+    Logger.root.info('TripsCubit onErrorRequest');
+    emit(
+        state.clone()
+          ..status = HttpStateStatus.error
+    );
+  }
 
   @override
-  void onStartRequest(String url, String method) {}
+  void onStartRequest(String url, String method) {
+    emit(
+        state.clone()
+          ..status = HttpStateStatus.loading
+    );
+  }
 
   @override
-  void onSuccessRequest(String url, String method) {}
+  void onSuccessRequest(String url, String method) {
+    emit(
+        state.clone()
+          ..status = HttpStateStatus.success
+    );
+  }
 }
