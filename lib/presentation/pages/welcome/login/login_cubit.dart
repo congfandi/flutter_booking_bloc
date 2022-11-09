@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:booking/config/config.dart';
-import 'package:booking/config/router/router.dart';
+import 'package:booking/config/router/app_router.gr.dart';
 import 'package:booking/domain/controller/auth_controller.dart';
 import 'package:booking/utils/helper/pref_helper.dart';
 import 'package:get_it/get_it.dart';
@@ -30,15 +30,18 @@ class LoginCubit extends Cubit<LoginState> implements HttpState {
   @override
   void onErrorRequest(String url, String method) {
     Logger.root.info("onErrorRequest $url $method");
+    emit(state.clone()..httpStateStatus = HttpStateStatus.error);
   }
 
   @override
   void onStartRequest(String url, String method) {
     Logger.root.info("onStartRequest $url $method");
+    emit(state.clone()..httpStateStatus = HttpStateStatus.loading);
   }
 
   @override
   void onSuccessRequest(String url, String method) {
     Logger.root.info("onSuccessRequest $url $method");
+    emit(state.clone()..httpStateStatus = HttpStateStatus.success);
   }
 }

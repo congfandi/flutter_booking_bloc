@@ -10,9 +10,6 @@ import 'package:booking/presentation/pages/onboarding/onboarding_view.dart';
 import 'package:booking/presentation/pages/welcome/login/login_view.dart';
 import 'package:booking/presentation/pages/welcome/register/register_view.dart';
 import 'package:booking/presentation/pages/welcome/welcome_view.dart';
-import 'package:flutter/material.dart';
-
-part 'app_router.gr.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
@@ -34,8 +31,9 @@ part 'app_router.gr.dart';
     AutoRoute(page: DetailPage, path: '/detail'),
     AutoRoute(page: SettingsPage, path: '/settings'),
     AutoRoute(page: FavoritePage, path: '/favorite'),
+    RedirectRoute(path: "*", redirectTo: "/discover")
     // AutoRoute(page: NotFoundPage, path: '*', name: 'NotFoundPage'),
   ],
 )
 // extend the generated private router
-class AppRouter extends _$AppRouter {}
+class $AppRouter{}
