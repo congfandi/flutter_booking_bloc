@@ -27,7 +27,14 @@ class AuthController implements AuthRepository {
     _httpState.onEndRequest(url, method);
 
     if (response.statusCode < 500) {
-      _httpState.onSuccessRequest(url, method);
+
+      if (response.statusCode > 199 && response.statusCode < 300) {
+        _httpState.onSuccessRequest(url, method);
+      } else {
+        _httpState.onErrorRequest(url, method);
+      }
+
+
       baseResponse = BaseResponse.fromJson(jsonDecode(response.body));
     } else {
       _httpState.onErrorRequest(url, method);

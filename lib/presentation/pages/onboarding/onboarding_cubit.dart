@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:booking/config/router/router.dart';
+import 'package:booking/config/router/app_router.gr.dart';
 import 'package:booking/utils/helper/pref_helper.dart';
 import 'package:get_it/get_it.dart';
 

@@ -67,7 +67,7 @@ class OtherMatches extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(trip.name ?? "", style: AppFont.paragraphLargeBold),
+              Expanded(child: Text(trip.name ?? "", style: AppFont.paragraphLargeBold,overflow: TextOverflow.ellipsis,)),
               Text(
                 "\$${trip.price ?? 0}",
                 style: AppFont.paragraphSmall,
