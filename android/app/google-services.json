@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "896365265157",
+    "project_id": "booking-app-the-ngoding",
+    "storage_bucket": "booking-app-the-ngoding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896365265157:android:310dacffff38744e7f376c",
+        "android_client_info": {
+          "package_name": "com.thengodin.booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896365265157-p2o578kdvkhu9asmjdcl2ou0lo561j4u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thengodin.booking",
+            "certificate_hash": "b1026e5443bed697fa95b8a10422d962f0b92f28"
+          }
+        },
+        {
+          "client_id": "896365265157-ork4jdt1e94kaftl2mm9tf3s4qfekf7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwxwdiloyRnbAf_B8BuBwWjW_t_83ISd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896365265157-ork4jdt1e94kaftl2mm9tf3s4qfekf7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

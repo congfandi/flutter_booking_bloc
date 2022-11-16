@@ -11,7 +11,8 @@ class Trip {
     this.tags,
   });
 
-  Trip.fromJson(dynamic json) {
+
+  Trip.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
     location = json['location'];
