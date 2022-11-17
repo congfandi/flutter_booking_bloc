@@ -1,4 +1,4 @@
-import 'package:booking/data/model/onboarding/Onboarding.dart';
+import 'package:booking/data/model/onboarding/onboarding.dart';
 import 'package:booking/data/src/img_string.dart';
 
 class OnboardingState {
