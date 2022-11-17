@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
   }
 
   Widget _buildPage(BuildContext context) {
-    final cubit = BlocProvider.of<LoginCubit>(context);
+    // final cubit = BlocProvider.of<LoginCubit>(context);
 
     return Scaffold(
       resizeToAvoidBottomInset: true,

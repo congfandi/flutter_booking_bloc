@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'settings_cubit.dart';
-import 'settings_state.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -16,7 +15,7 @@ class SettingsPage extends StatelessWidget {
   }
 
   Widget _buildPage(BuildContext context) {
-    final cubit = BlocProvider.of<SettingsCubit>(context);
+    // final cubit = BlocProvider.of<SettingsCubit>(context);
 
     return Container();
   }

@@ -4,7 +4,6 @@ import 'package:booking/data/src/img_string.dart';
 import 'package:booking/presentation/pages/discover/trips/trips_cubit.dart';
 import 'package:booking/utils/extension/extension.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:logging/logging.dart';

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'register_cubit.dart';
-import 'register_state.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -16,7 +15,7 @@ class RegisterPage extends StatelessWidget {
   }
 
   Widget _buildPage(BuildContext context) {
-    final cubit = BlocProvider.of<RegisterCubit>(context);
+    // final cubit = BlocProvider.of<RegisterCubit>(context);
 
     return Container();
   }

@@ -7,7 +7,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'component/welcome_image.dart';
 import 'welcome_done_cubit.dart';
-import 'welcome_done_state.dart';
 
 class WelcomeDonePage extends StatelessWidget {
   const WelcomeDonePage({super.key});
@@ -15,13 +14,13 @@ class WelcomeDonePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => Welcome_doneCubit(),
+      create: (BuildContext context) => WelcomeDoneCubit(),
       child: Builder(builder: (context) => _buildPage(context)),
     );
   }
 
   Widget _buildPage(BuildContext context) {
-    final cubit = BlocProvider.of<Welcome_doneCubit>(context);
+    // final cubit = BlocProvider.of<WelcomeDoneCubit>(context);
     return Scaffold(
       backgroundColor: AppColor.accentGreen,
       body: Column(

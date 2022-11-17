@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:booking/config/router/app_router.gr.dart';
 import 'package:booking/utils/helper/pref_helper.dart';
-import 'package:logging/logging.dart';
 
 class FirstInstallGuard extends AutoRouteGuard {
   @override

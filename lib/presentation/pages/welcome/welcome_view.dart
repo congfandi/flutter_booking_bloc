@@ -8,7 +8,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:logging/logging.dart';
 
 import 'welcome_cubit.dart';
-import 'welcome_state.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});

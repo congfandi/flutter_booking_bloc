@@ -1,9 +1,9 @@
-class Forgot_passwordState {
-  Forgot_passwordState init() {
-    return Forgot_passwordState();
+class ForgotPasswordState {
+  ForgotPasswordState init() {
+    return ForgotPasswordState();
   }
 
-  Forgot_passwordState clone() {
-    return Forgot_passwordState();
+  ForgotPasswordState clone() {
+    return ForgotPasswordState();
   }
 }
